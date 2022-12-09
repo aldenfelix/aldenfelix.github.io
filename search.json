@@ -60,7 +60,7 @@
     "href": "Assignment03.html",
     "title": "Assignment 3",
     "section": "",
-    "text": "# install.packages(\"rtweet\")\nlibrary(rtweet)\nlibrary(tidyverse)\n# auth_setup_default()\n\njbtime = get_timelines(\"JoeBiden\", n = 500)\n\nslice_max(jbtime, order_by = favorite_count) %>% \n  select(full_text)\n\n# A tibble: 1 × 1\n  full_text                                           \n  <chr>                                               \n1 Donald Trump failed America. https://t.co/fylyocYcse\n\nslice_max(jbtime, order_by = retweet_count) %>% \n  select(full_text)\n\n# A tibble: 1 × 1\n  full_text                                                                     \n  <chr>                                                                         \n1 \"RT @POTUS: I just want to make a few things clear:\\n \\nThe Holocaust happene…"
+    "text": "# install.packages(\"rtweet\")\nlibrary(rtweet)\nlibrary(tidyverse)\n# auth_setup_default()\n\njbtime = get_timelines(\"JoeBiden\", n = 500)\n\nslice_max(jbtime, order_by = favorite_count) %>% \n  select(full_text)\n\n# A tibble: 0 × 1\n# … with 1 variable: full_text <chr>\n\nslice_max(jbtime, order_by = retweet_count) %>% \n  select(full_text)\n\n# A tibble: 0 × 1\n# … with 1 variable: full_text <chr>"
   },
   {
     "objectID": "Assignment04.html",
