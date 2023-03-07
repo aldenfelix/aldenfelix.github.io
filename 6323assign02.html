@@ -147,10 +147,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./project.qmd">
- <span class="menu-text">Project</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./affinity_project.html">
+ <span class="dropdown-text">Predicting Interstate Affinity using Machine Learning/Database Building</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./road_project.html">
+ <span class="dropdown-text">Effect of Road Classification on Alcohol Related Crash Severity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mobility_project.html">
+ <span class="dropdown-text">Exploring Human Mobility Patterns Using Twitter Data</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fall-2022" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Fall 2022</span>
@@ -236,12 +251,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/aldenfelix/aldenfelix.github.io"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/aldenfelix"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/aldenzedfelix"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/aldenzedfelix/"><i class="bi bi-instagram" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -398,7 +418,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x,y) <span class="co"># Correlation of x and y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9959668</code></pre>
+<pre><code>[1] 0.9922217</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1303</span>) <span class="co"># Set the seed for Random Number Generator (RNG) to generate values that are reproducible.</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -683,7 +703,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 package 'ISLR' successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-    C:\Users\Alden\AppData\Local\Temp\Rtmpys7xfQ\downloaded_packages</code></pre>
+    C:\Users\Alden\AppData\Local\Temp\RtmpELhNoN\downloaded_packages</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(ptbu, require, <span class="at">character.only =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alden Felix, Wei-chen Huang, Jim_Pan">
+<meta name="dcterms.date" content="2023-03-22">
 
-<title>Alden Felix - Blog</title>
+<title>Alden Felix - Predicting Interstate Affinity using Machine Learning/Database Building</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,37 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -113,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -244,78 +214,120 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#topic" id="toc-topic" class="nav-link active" data-scroll-target="#topic">Topic</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
+  <li><a href="#project-proposal-presentation" id="toc-project-proposal-presentation" class="nav-link" data-scroll-target="#project-proposal-presentation">Project Proposal Presentation</a></li>
+  <li><a href="#database-building" id="toc-database-building" class="nav-link" data-scroll-target="#database-building">Database Building</a>
+  <ul class="collapse">
+  <li><a href="#database-purpose" id="toc-database-purpose" class="nav-link" data-scroll-target="#database-purpose">Database Purpose</a></li>
+  <li><a href="#schema" id="toc-schema" class="nav-link" data-scroll-target="#schema">Schema</a>
+  <ul class="collapse">
+  <li><a href="#database-relation-schema" id="toc-database-relation-schema" class="nav-link" data-scroll-target="#database-relation-schema">Database Relation Schema</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Predicting Interstate Affinity using Machine Learning/Database Building</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alden Felix, Wei-chen Huang, Jim_Pan </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 22, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This project is a work in progress</p>
+</div>
+</div>
+<section id="topic" class="level2">
+<h2 class="anchored" data-anchor-id="topic">Topic</h2>
+<p>As a team, we were inspired by Dr.&nbsp;Vito D’Orazio’s work at UTD, where he utilized automated machine learning to create a dynamic forecasting model to predict inter-state violence in Africa. After looking into his work, we decided to further generalize the idea and create a model to predict inter-state affinity: whether two states are allies, trade partners, neutral, have conflicting interests, or hostile towards one another. In order to do this, we will utilize political, social, and economic data.</p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>This study intends to employ machine learning methods to predict affinity between states using social and economic variables. These variables will be dyadic, for example trade flow between a pair of states, and variables unique to a state, such as GDP, population, military expenditure, education statistics, gender, and other relevant economic and social factors.</p>
+<p>The dependent variable, the measure of a state’s affinity, could take two forms within this study. Using CAMEO codes and intensity scores found in coded event data, a continuous dependent variable could be derived that represents general affinity between two states. The more complex method would involve using a clustering method to find “affinity communities”, which would result in a categorical dependent variable (Pauls 2017).</p>
+<p>Instead of limiting the study to a single machine learning method, it would prove insightful to test multiple methods for predictive power against a traditional OLS model, or a LASSO model in the case of the categorical dependent variable. Some of the possible models that could be employed alongside these are random forests, gradient boosted machines, and neural networks. In this way the study can test machine learning methods with varying degrees of complexity.</p>
+</section>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
+<p>This study will use data from various sources, including the World Bank, International Monetary Fund, and UTD Event Data which compiles coded event data from multiple sources including Phoenix_RT, Phoenix NYT, Phoenix FBIS, Phoenix SWB, ICEWS: Integrated Crisis Early Warning System from Harvard Dataverse, and TERRIER.</p>
+</section>
+<section id="project-proposal-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="project-proposal-presentation">Project Proposal Presentation</h2>
+<iframe src="https://docs.google.com/presentation/d/1PuD0S3UJZQ4Ex0uD2LVS56FjCZo15bhm/edit?usp=share_link&amp;ouid=109439730188441667386&amp;rtpof=true&amp;sd=true" style="height:700px;width:700px;" title="Project Proposal Presentation"></iframe>
+<hr>
+</section>
+<section id="database-building" class="level1">
+<h1>Database Building</h1>
+<section id="alden-felix" class="level4">
+<h4 class="anchored" data-anchor-id="alden-felix"><em>Alden Felix</em></h4>
+</section>
+<section id="database-purpose" class="level2">
+<h2 class="anchored" data-anchor-id="database-purpose">Database Purpose</h2>
+<p>The purpose of this database project is to help fill in a gap in the existing literature surrounding affinity communities. While conflict has been studied extensively, and predicting conflict through machine learning and big data is attracting attention, the same is not true for the study of network effects on global relationships and investigating the origin of these networks. This database will directly aid the aforementioned machine learning project I am involved in that seeks to predict interstate affinity using multiple social and economic variables. The data gathering process for the project revealed that the data we are seeking is currently scattered throughout multiple unrelated databases and contains many variables that are not of interest. Collecting, merging, and tidying the data into a form that can be used in a machine learning model to predict affinity will be made much easier with a relevant database.</p>
+</section>
+<section id="schema" class="level2">
+<h2 class="anchored" data-anchor-id="schema">Schema</h2>
+<p>The most significant element of the database for affinity studies will be the dyad relation. There will be two tuples for every dyad to be able to build a model with any state in the database serving as the home state, which all other states will compare to. For example, one tuple with state A as the source and state B as the target, and another tuple with the roles reversed. This is also necessary to account for differences in statistical measurement by state, which causes state A’s imports from state B to not equal state B’s exports to state A. Below is a relational schema for the database with placeholders for the social and economic variables as they are yet to be formally defined.</p>
+<section id="database-relation-schema" class="level3">
+<h3 class="anchored" data-anchor-id="database-relation-schema">Database Relation Schema</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Relation Schema.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>This is an initial stage of the relation schema with the most important elements laid out to be developed further as the machine learning study progresses. Particularly, the measure of affinity between states, the dependent variable of the study, has multiple ways of being computed which would modify the schema.</p>
 
 
+</section>
+</section>
+</section>
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="" data-listing-date-sort="1670220000000" data-listing-file-modified-sort="1677099045715" data-listing-reading-time-sort="0.025">
-<div class="thumbnail">
-<p><a href="./posts/Project/index.html"> <img src="./posts/Project/image.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Project/index.html">
-<h3 class="no-anchor listing-title">
-Project
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-
-</div>
-<a href="./posts/Project/index.html">
-<div class="listing-description">
-EPPS 6323 Project Proposal
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Project/index.html">
-<div class="listing-date">
-Dec 5, 2022
-</div>
-<div class="listing-author">
-Alden Felix
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

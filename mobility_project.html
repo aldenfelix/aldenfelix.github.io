@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alden Felix, Kyndall Brown, Zeyu Sun">
+<meta name="dcterms.date" content="2022-12-09">
 
-<title>Alden Felix - Blog</title>
+<title>Alden Felix - Exploring Human Mobility Patterns Using Twitter Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,37 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -113,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -244,78 +214,101 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#link-to-final-papergithub-repository" id="toc-link-to-final-papergithub-repository" class="nav-link active" data-scroll-target="#link-to-final-papergithub-repository">Link to Final Paper/Github Repository</a>
+  <ul class="collapse">
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#data-collection-and-visualization-methods" id="toc-data-collection-and-visualization-methods" class="nav-link" data-scroll-target="#data-collection-and-visualization-methods">Data Collection and Visualization Methods</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Exploring Human Mobility Patterns Using Twitter Data</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alden Felix, Kyndall Brown, Zeyu Sun </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 9, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="link-to-final-papergithub-repository" class="level1">
+<h1>Link to Final Paper/Github Repository</h1>
+<p><a href="https://github.com/aldenfelix/EPPS_6302" class="uri">https://github.com/aldenfelix/EPPS_6302</a></p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>This project focuses on the differences between DFW residents’ mobility patterns before, during, and after COVID-19 social distancing restrictions. Mobility data in the form of geotagged tweets was scraped from twitter for these three periods using API and non-API methods, and median distance traveled for the user sample in all three periods was computed. User movement was also animated on a map at a national and local level to showcase the effectiveness of studying mobility data through animation. This study finds that for the users in the sample human mobility during social distancing restrictions suddenly and drastically decreased as expected, but in the period after restrictions ended mobility increased to a level greater than what was observed in the period before social distancing restrictions were put in place.</p>
+</section>
+<section id="data-collection-and-visualization-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection-and-visualization-methods">Data Collection and Visualization Methods</h2>
+<p>During the data collection phase, we initially intended to only utilize R and the “rtweet” package to scrape and analyze Twitter data. However, because the Twitter API restricts access to the “full archive” to academic level developer accounts, and we were not able to get this access level, we were only able to access tweets made within the last 7 days. Therefore, we employed a non-API method in Python in combination with an API method in R to scrape twitter data from the 3 time periods we had selected: March 2018 to October 2018, September 2019 to May 2020, and October 2021 to July 2022. To ensure randomization, we utilized the stream function in the “rtweet” package to collect live tweets in the Dallas Fort Worth area over a 2-hour period. Through this function we were able to obtain users IDs and names for scraping historical tweets utilizing the non-API method. We were able to obtain 1000 usernames at this stage. We then utilized the Python package “snscrape” to scrape tweets posted by individual users in our sample in the three time periods. The data collected contained ten variables: date and time posted, tweet ID, user ID, coordinates of where the tweets were posted from, place of where the tweets were posted from, the retweet count, the reply count, the like count, the count of the tweets, and the Username. Due to the size of the data and processability concerns, we reduced the sample data down to 350 Users. The total data collected contained 1,224,565 observations, where 741,249 contain coordinates. The coordinates contain longitude and latitude information for our further analysis.</p>
+<p>All of our visualization was performed in R using multiple methods. We identified and ranked the users in our sample based on the number of unique coordinates they had posted throughout thetime periods. The top traveler has 192 unique coordinates which indicates frequent travel. Based on the number of unique coordinates, we classified users with more than 92 unique coordinates as the top travelers. Thirteen people among the 350 randomly selected Users are considered as top travelers. We classified users with less than 6 unique coordinates as the least travelers. Among the 350 Users, 44 people posted tweets with less than 6 unique coordinates in a 5-year period. To better understand the tweets, we performed a sentiment analysis (Hack Your Data Beautiful; Saif 2013) on both top travelers and least travelers among the three time periods. For this analysis, we used the R package “tidytext” and “tidyverse.”</p>
+<p>We also calculated the distance traveled between consecutive tweets and cumulative distance traveled for a subgroup of users, then created scatterplots and line graphs showing the distances traveled by the users. We identified a list of 112 unique usernames that tweeted in all data collection periods. The distance traveled between consecutive tweets for each unique user was calculated using the Haversine formula for finding the shortest great circle distance between two points on the surface of the Earth (Pineda-Krch 2011). Then those distances were summed as cumulative total distances traveled for each tweet, meaning total distance traveled at the time of each tweet as a sum of all previous between-tweet distances. The calculations were validated by comparing the results for a small number of points with an online distance calculator to ensure the code had no errors. Although the calculation, being based on the Law of Cosines, contains a small amount of error due to the Earth being an ellipsoid instead of a perfect sphere, the approximation is acceptable for our purposes as we wanted to map human movement over larger distances. Median cumulative distance traveled for the 112 unique users was calculated for each of the three periods. The “ggplot2” package was used to two types of graph, a scatterplot showing the distance between tweets across time for a selected user and a line graph showing cumulative distance traveled across time for a select group of users.</p>
+<p>The main packages used to animate our movement data were “sf” and “moveVis”. “Sf” was used for general geographic data manipulation while “moveVis” provided the means of animating our movement data onto a basemap. The main difficulty we faced in creating these visualizations was the time that the functions in the “moveVis” package took to execute with a dataset of about 400,000 observations spread between three separately animated objects. Creating the frames and stitching them together into a video, even on a mid-range desktop computer, led to significant downtime spent waiting for the functions’ outputs.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>This analysis contains certain limitations. Due to the nature of Twitter data, the analysis lacks generalization due to the targeted population. As an online social media platform, the user demographic is limited. In addition, due to Twitter’s recent change on Twitter’s geographic metadata, only a limited number of tweets contain geographic information. For our analysis, slightly over half of the tweets generated contained coordinate information for us to analyze. These limitations are recognized by many scholars using tweets for analysis as well. For our analysis, due to time constraints and concerns on the processability of the data, we were only able to analyze tweets from 350 users. To decrease selection bias in a future analysis we would like to expand the sample to more users. Furthermore, the time periods selected for this analysis may not cover the full impact of the pandemic on the population. To better analyze the impact of the pandemic, we would like to expand the time period to the end of 2020. Lastly, we would like to expand the research on wider geographic areas, such as rural areas, to cover more demographics.</p>
+<p>Our project yields important conclusions for the study of human mobility, especially human mobility in relation to the COVID-19 pandemic. As expected, and as studied in existing literature, for the users in the sample human mobility during social distancing restrictions suddenly and drastically decreased. The more significant finding is that in the period after social distancing restrictions ended human mobility in our sample increased to a level greater than what was observed in the period before social distancing restrictions were put in place. Validating this study and generalizing it to a broader population would have implications for if an event with an impact on human mobility similar toIn relation to data analysis methods, we found that animation can be an effective visualization for mobility data, especially for shocks in the data. As seen in our visualization the sudden decrease in human mobility at the start of the pandemic was easily observable. However, in order to reach more definitive conclusions for not as easily observable events such as the increase in mobility we saw from users after the pandemic, a quantitative analysis was necessary.</p>
+<p>In relation to data collection, Twitter remains an easily accessible source for large amounts of movement data, even after changes by Twitter that decreased the number of geotagged tweets available. Whether this will remain true in the future as data privacy becomes a larger concern is questionable. Also, as explored in other works, depending on the target population of a study, Twitter data might not yield a representative sample. In the process of generalizing the study, it is possible that specific demographics will not be captured. COVID-19 were to occur in the future.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Armstrong, Caitrin, et al.&nbsp;“Challenges when identifying migration from geo-located Twitter data.” EPJ Data Science 10.1 (2021): 1.</p>
+<p>Barbosa, H., Barthelemy, M., Ghoshal, G., James, C., Lenormand, M., Louail, T., Menezes, R., Ramasco, J., Simini, F. and Tomasini, M., 2018. Human mobility: Models and applications. Physics Reports, 734, pp.1-74.</p>
+<p>Chi, Guanghua, et al.&nbsp;“A general approach to detecting migration events in digital trace data.” PloS one 15.10 (2020): e0239408.</p>
+<p>Colizza V, Barrat A, Barthelemy M, Valleron A-J, Vespignani A (2007) Modeling the Worldwide</p>
+<p>Hack Your Data Beautiful, “Scraping and Visualising Twitter Data”, https://psyteachr.github.io/hack-your-data/scrape-twitter.html</p>
+<p>Hübl, Franziska, et al.&nbsp;“Analyzing refugee migration patterns using geo-tagged tweets.” ISPRS International Journal of Geo-Information 6.10 (2017): 302.</p>
+<p>Kolapo Obajuluwa, “Twitter Word Clouds with R,” https://rpubs.com/kolaoba/twitterwordclouds</p>
+<p>Nestorowicz J, Anacka M. Mind the Gap? Quantifying Interlinkages between Two Traditions in MigrationLiterature. International Migration Review. 2019; 53(1):283–307. https://doi.org/10.1177/0197918318768557</p>
+<p>Pineda-Krch, M. (2011, May 12). Great-circle distance calculations in R. R-bloggers. https://www.r-bloggers.com/2010/11/great-circle-distance-calculations-in-r/</p>
+<p>Rogers A, Raymer J, Newbold KB. Reconciling and translating migration data collected over time intervals of differing widths. The Annals of Regional Science. 2003; 37(4):581–601. https://doi.org/10.1007/s00168-003-0128-y</p>
+<p>Rudis, Bob. 2018. 21 Recipes for Mining Twitter Data with rtweet(https://rud.is/books/21-recipes/)</p>
+<p>Saif M. Mohammad and Peter Turney. (2013), ``Crowdsourcing a Word-Emotion Association Lexicon.’’ Computational Intelligence, 29(3): 436-465.</p>
+<p>Spread of Pandemic Influenza: Baseline Case and Containment Interventions. PLoS Med 4(1): e13. https://doi.org/10.1371/journal.pmed.0040013</p>
+<p>Tizzoni M, Bajardi P, Decuyper A, Kon Kam King G, Schneider CM, Blondel V, et al.&nbsp;(2014) On the Use of Human Mobility Proxies for Modeling Epidemics. PLoS Comput Biol 10(7): e1003716. https://doi.org/10.1371/journal.pcbi.1003716</p>
+<p>Willekens F. Models of migration: Observations and judgement. International migration in Europe: Data, models and estimates. 2008; p.&nbsp;117–147.</p>
+<p>Yin, Junjun, Yizhao Gao, and Guangqing Chi. “An evaluation of geo-located Twitter data for measuring human migration.” International Journal of Geographical Information Science 36.9 (2022): 1830-1852.</p>
+<p>Zagheni, Emilio, et al.&nbsp;“Inferring international and internal migration patterns from Twitter data.” Proceedings of the 23rd international conference on world wide web. 2014.</p>
 
 
+</section>
+</section>
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="" data-listing-date-sort="1670220000000" data-listing-file-modified-sort="1677099045715" data-listing-reading-time-sort="0.025">
-<div class="thumbnail">
-<p><a href="./posts/Project/index.html"> <img src="./posts/Project/image.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Project/index.html">
-<h3 class="no-anchor listing-title">
-Project
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-
-</div>
-<a href="./posts/Project/index.html">
-<div class="listing-description">
-EPPS 6323 Project Proposal
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Project/index.html">
-<div class="listing-date">
-Dec 5, 2022
-</div>
-<div class="listing-author">
-Alden Felix
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
