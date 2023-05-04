@@ -158,7 +158,7 @@
     "href": "affinity_project.html",
     "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
     "section": "",
-    "text": "Note\n\n\n\nThis project is a work in progress"
+    "text": "As a team, we were inspired by Dr. Vito D’Orazio’s work at UTD, where he utilized automated machine learning to create a dynamic forecasting model to predict inter-state violence in Africa. After looking into his work, we decided to further generalize the idea and create a model to predict inter-state affinity: whether two states are allies, trade partners, neutral, have conflicting interests, or hostile towards one another. In order to do this, we will utilize political, social, and economic data."
   },
   {
     "objectID": "affinity_project.html#topic",
@@ -306,5 +306,40 @@
     "title": "Effect of Road Classification on Alcohol Related Crash Severity",
     "section": "",
     "text": "https://github.com/aldenfelix/EPPS_6356\n\n\nThis project centers around determining the connection between types of roads and the severity of alcohol-related crashes within the United States. Data specifically targets the area of Collin County in Texas between the year 2018. Using regression and data visualization to come to the conclusion that there is a marked difference in severity of crashes based upon classifications of roadways. The research question is whether or not there is a discrepancy between the different classification of roadways. We find that lower injury levels are more common on county roads or smaller road types while significant injuries are roughly equivalent between smaller and larger road types. Tollways have the highest safety rating of non-trafficways, while places such as alleyways have predictably low likelihoods of injuries.\n\n\n\nThe type of regression used for this analysis is cumulative logit using a stopping ratio. The data, as previously stated, is taken from Collin County in the state of Texas during the year 2018. The data comes directly from the Texas Department of Transportation, specifically from their Crash Records Information System. This data includes classifications of roads, which receive a numerical designation dependent upon their classification. For example, a highway might receive designation 1 in the analysis, while a backroad or dirt road might receive a designation of 5 to help distinguish and differentiate the two. This also helps in regards to the regression itself, making the designations distinct numbers to help in comparing and contrasting them. For the purpose of the model and data crash severity ranges from five different classifications. These are as follows:\n\nA - Suspected Major Injury\nB - Suspected Minor Injury\nC - Possible Injury\nI - Not Injured\nK - Fatal Injury\n99 - NA\n\n\n\n\n[1] Albalate D (2006). Lowering blood alcohol content levels to save lives: the European experience. Barcelona, Research Institute of Applied Economics (No. CREAP20006-07).\n[2] Elder RW et al. (2004). Effectiveness of mass media campaigns for reducing drinking and driving and alcohol-involved crashes: a systematic review. American Journal of Preventive Medicine, 27:57–65.\n[3] Peden M et al., eds. (2004). World report on road traffic injury prevention. Geneva, World Health Organization.\n[4] Rezapour, Wulff, S. S., & Ksaibati, K. (2019). Examination of the severity of two-lane highway traffic barrier crashes using the mixed logit model. Journal of Safety Research, 70, 223–232. https://doi.org/10.1016/j.jsr.2019.07.010\n[5] Sethi, D. & Mitis, Francesco. (2012). Alcohol and Road Safety Policy in Europe: Successes and Failures. Injury Prevention. 18. A31-A32. 10.1136/injuryprev-2012-040580c.28.\n[6] WHO (2007). Drinking and driving. A road safety manual for decision-makers and practitioners. Geneva, World Health Organization, Global Road Safety Partnership.\n[7] Zobeck TS, Williams GD (1994). Evaluation synthesis of the impacts of DWI laws and enforcement methods: final report. Rockville, MD, National Institute on Alcohol Abuse and Alcoholism, Office of Policy Analysis."
+  },
+  {
+    "objectID": "affinity_project.html#shiny-app",
+    "href": "affinity_project.html#shiny-app",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "Shiny App",
+    "text": "Shiny App"
+  },
+  {
+    "objectID": "affinity_project.html#database-explorer-shiny-app",
+    "href": "affinity_project.html#database-explorer-shiny-app",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "Database Explorer Shiny App",
+    "text": "Database Explorer Shiny App"
+  },
+  {
+    "objectID": "affinity_project.html#shiny-app-for-database-exploration",
+    "href": "affinity_project.html#shiny-app-for-database-exploration",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "Shiny App for Database Exploration",
+    "text": "Shiny App for Database Exploration"
+  },
+  {
+    "objectID": "affinity_project.html#affinity-project-proposal-presentation",
+    "href": "affinity_project.html#affinity-project-proposal-presentation",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "Affinity Project Proposal Presentation",
+    "text": "Affinity Project Proposal Presentation"
+  },
+  {
+    "objectID": "affinity_project.html#database-project-presentation",
+    "href": "affinity_project.html#database-project-presentation",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "Database Project Presentation",
+    "text": "Database Project Presentation"
   }
 ]
