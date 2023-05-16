@@ -158,7 +158,7 @@
     "href": "affinity_project.html",
     "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
     "section": "",
-    "text": "As a team, we were inspired by Dr. Vito D’Orazio’s work at UTD, where he utilized automated machine learning to create a dynamic forecasting model to predict inter-state violence in Africa. After looking into his work, we decided to further generalize the idea and create a model to predict inter-state affinity: whether two states are allies, trade partners, neutral, have conflicting interests, or hostile towards one another. In order to do this, we will utilize political, social, and economic data."
+    "text": "https://github.com/aldenfelix/Predicting-Interstate-Affinity\nhttps://github.com/aldenfelix/International-Relations-Database\n\n\nMachine learning has been able to accurately predict conflict at the local and state level. This study examines if machine learning can be used to make accurate predictions of generalized relationships between states, with the United States as the base of reference. International relations were measured using an aggregate affinity score derived from event data, and various socioeconomic and demographic factors were used as predictive variables. Multiple models, including a regression and classification random forest and a deep learning model, were built and evaluated in regards to their accuracy in predicting interstate affinity. The strongest predictors of interstate affinity varied significantly depending on the model.\n\n\n\nThis study employs machine learning methods to predict affinity between states using socioeconomic and demographic variables. These variables are dyadic, for example trade flow between a pair of states, and also variables unique to a state, such as GDP, population, military expenditure, education and gender statistics, and other relevant economic and social factors.\nThe dependent variable is a measure of a state’s relationship with the base country, the US in this study, and takes two forms. Using CAMEO codes and intensity scores found in coded event data, a continuous dependent variable is derived that represents general affinity between two states. The dependent variable’s other form is a categorical transformation of the continuous affinity variable.\nThe machine learning algorithms applied in this study are a random forest classification model and a random forest regression model in addition to a deep learning model.\n\n\n\nThis study uses data from various sources, including the World Bank, International Monetary Fund, United Nations, Freedom House, and the Integrated Crisis Early Warning System Coded Event Database (ICEWS)."
   },
   {
     "objectID": "affinity_project.html#topic",
@@ -193,7 +193,7 @@
     "href": "affinity_project.html#database-purpose",
     "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
     "section": "Database Purpose",
-    "text": "Database Purpose\nThe purpose of this database project is to help fill in a gap in the existing literature surrounding affinity communities. While conflict has been studied extensively, and predicting conflict through machine learning and big data is attracting attention, the same is not true for the study of network effects on global relationships and investigating the origin of these networks. This database will directly aid the aforementioned machine learning project I am involved in that seeks to predict interstate affinity using multiple social and economic variables. The data gathering process for the project revealed that the data we are seeking is currently scattered throughout multiple unrelated databases and contains many variables that are not of interest. Collecting, merging, and tidying the data into a form that can be used in a machine learning model to predict affinity will be made much easier with a relevant database."
+    "text": "Database Purpose\nStudies in international relations often involve numerous variables that cannot be found within a single dataset. Therefore, this project seeks to provide a high quality yet diverse database that will aid relevant studies in their data collection process. Data is collected from multiple credible sources, wrangled, and stored in a PostgreSQL server using R, and then deployed to the cloud in the form of an R Shiny application as proof of concept. The dataset currently includes coded event data, countries and their socioeconomic and demographic data, and dyadic variables such as trade between a pair of states, all for the period from 2015 to 2019."
   },
   {
     "objectID": "affinity_project.html#schema",
@@ -326,7 +326,7 @@
     "href": "affinity_project.html#shiny-app-for-database-exploration",
     "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
     "section": "Shiny App for Database Exploration",
-    "text": "Shiny App for Database Exploration"
+    "text": "Shiny App for Database Exploration\n\n\n\n\n\n\nNote\n\n\n\nPlease use this direct link to the application if the below instance does not load. https://aldenfelix.shinyapps.io/database_project/"
   },
   {
     "objectID": "affinity_project.html#affinity-project-proposal-presentation",
@@ -341,5 +341,19 @@
     "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
     "section": "Database Project Presentation",
     "text": "Database Project Presentation"
+  },
+  {
+    "objectID": "affinity_project.html#methods",
+    "href": "affinity_project.html#methods",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "Methods",
+    "text": "Methods\nThe data was manually collected and imported into R studio and then wrangled into appropriate data types and formats before being exported into a local PostgreSQL server using the ‘DBI’ library. A relation schema was made beforehand and empty tables were created to store the data. Once the data was stored correctly in the local PostgreSQL server, it was converted into SQLite format using DB Browser for SQLite. An application was built using R Shiny that allows basic searching and viewing of the database, and deployed to the cloud as proof-of-concept. Below is the relation schema for the database.\n\nDatabase Relation Schema"
+  },
+  {
+    "objectID": "affinity_project.html#references",
+    "href": "affinity_project.html#references",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "References",
+    "text": "References\n[1] Kuhn, & Johnson, K. (2013). Applied predictive modeling. Springer.\n[2] Halterman, A., Bagozzi, B. E., Beger, A., Schrodt, P., & Scraborough, G. (2023, April 3). PLOVER and POLECAT: A New Political Event Ontology and Dataset. https://doi.org/10.31235/osf.io/rm5dw\n[3] Helle, V., Negus, A.S., & Nyberg, J. (2018). Improving armed conflict prediction using machine learning : ViEWS+.\n[4] Pauls, & Cranmer, S. J. (2017). Affinity communities in United Nations voting: Implications for democracy, cooperation, and conflict. Physica A, 484, 428–439. https://doi.org/10.1016/j.physa.2017.04.177\n[5] Perry. (2013). Machine Learning and Conflict Prediction: A Use Case. Stability (Norfolk, VA ), 2(3), 56–. https://doi.org/10.5334/sta.cr\n[6] Bazzi, Blair, R. A., Blattman, C., Dube, O., Gudgeon, M., & Peck, R. (2022). The Promise and Pitfalls of Conflict Prediction: Evidence from Colombia and Indonesia. The Review of Economics and Statistics, 104(4), 764–779. https://doi.org/10.1162/rest_a_01016"
   }
 ]
