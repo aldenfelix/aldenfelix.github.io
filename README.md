@@ -1,1 +1,1 @@
-Quarto Website
+Personal website built with Quarto
