@@ -178,8 +178,8 @@
     "objectID": "affinity_project.html#data-sources",
     "href": "affinity_project.html#data-sources",
     "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
-    "section": "Data Sources",
-    "text": "Data Sources\nThis study will use data from various sources, including the World Bank, International Monetary Fund, and UTD Event Data which compiles coded event data from multiple sources including Phoenix_RT, Phoenix NYT, Phoenix FBIS, Phoenix SWB, ICEWS: Integrated Crisis Early Warning System from Harvard Dataverse, and TERRIER."
+    "section": "",
+    "text": "This study uses data from various sources, including the World Bank, International Monetary Fund, United Nations, Freedom House, and the Integrated Crisis Early Warning System Coded Event Database (ICEWS)."
   },
   {
     "objectID": "affinity_project.html#project-proposal-presentation",
@@ -383,5 +383,19 @@
     "title": "Exploring Human Mobility Patterns Using Twitter Data",
     "section": "",
     "text": "Armstrong, Caitrin, et al. “Challenges when identifying migration from geo-located Twitter data.” EPJ Data Science 10.1 (2021): 1.\nBarbosa, H., Barthelemy, M., Ghoshal, G., James, C., Lenormand, M., Louail, T., Menezes, R., Ramasco, J., Simini, F. and Tomasini, M., 2018. Human mobility: Models and applications. Physics Reports, 734, pp.1-74.\nChi, Guanghua, et al. “A general approach to detecting migration events in digital trace data.” PloS one 15.10 (2020): e0239408.\nColizza V, Barrat A, Barthelemy M, Valleron A-J, Vespignani A (2007) Modeling the Worldwide\nHack Your Data Beautiful, “Scraping and Visualising Twitter Data”, https://psyteachr.github.io/hack-your-data/scrape-twitter.html\nHübl, Franziska, et al. “Analyzing refugee migration patterns using geo-tagged tweets.” ISPRS International Journal of Geo-Information 6.10 (2017): 302.\nKolapo Obajuluwa, “Twitter Word Clouds with R,” https://rpubs.com/kolaoba/twitterwordclouds\nNestorowicz J, Anacka M. Mind the Gap? Quantifying Interlinkages between Two Traditions in MigrationLiterature. International Migration Review. 2019; 53(1):283–307. https://doi.org/10.1177/0197918318768557\nPineda-Krch, M. (2011, May 12). Great-circle distance calculations in R. R-bloggers. https://www.r-bloggers.com/2010/11/great-circle-distance-calculations-in-r/\nRogers A, Raymer J, Newbold KB. Reconciling and translating migration data collected over time intervals of differing widths. The Annals of Regional Science. 2003; 37(4):581–601. https://doi.org/10.1007/s00168-003-0128-y\nRudis, Bob. 2018. 21 Recipes for Mining Twitter Data with rtweet(https://rud.is/books/21-recipes/)\nSaif M. Mohammad and Peter Turney. (2013), ``Crowdsourcing a Word-Emotion Association Lexicon.’’ Computational Intelligence, 29(3): 436-465.\nSpread of Pandemic Influenza: Baseline Case and Containment Interventions. PLoS Med 4(1): e13. https://doi.org/10.1371/journal.pmed.0040013\nTizzoni M, Bajardi P, Decuyper A, Kon Kam King G, Schneider CM, Blondel V, et al. (2014) On the Use of Human Mobility Proxies for Modeling Epidemics. PLoS Comput Biol 10(7): e1003716. https://doi.org/10.1371/journal.pcbi.1003716\nWillekens F. Models of migration: Observations and judgement. International migration in Europe: Data, models and estimates. 2008; p. 117–147.\nYin, Junjun, Yizhao Gao, and Guangqing Chi. “An evaluation of geo-located Twitter data for measuring human migration.” International Journal of Geographical Information Science 36.9 (2022): 1830-1852.\nZagheni, Emilio, et al. “Inferring international and internal migration patterns from Twitter data.” Proceedings of the 23rd international conference on world wide web. 2014."
+  },
+  {
+    "objectID": "affinity_project.html#abstract",
+    "href": "affinity_project.html#abstract",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "",
+    "text": "Machine learning has been able to accurately predict conflict at the local and state level. This study examines if machine learning can be used to make accurate predictions of generalized relationships between states, with the United States as the base of reference. International relations were measured using an aggregate affinity score derived from event data, and various socioeconomic and demographic factors were used as predictive variables. Multiple models, including a regression and classification random forest and a deep learning model, were built and evaluated in regards to their accuracy in predicting interstate affinity. The strongest predictors of interstate affinity varied significantly depending on the model."
+  },
+  {
+    "objectID": "affinity_project.html#methods-data",
+    "href": "affinity_project.html#methods-data",
+    "title": "Predicting Interstate Affinity using Machine Learning/Database Building",
+    "section": "",
+    "text": "This study employs machine learning methods to predict affinity between states using socioeconomic and demographic variables. These variables are dyadic, for example trade flow between a pair of states, and also variables unique to a state, such as GDP, population, military expenditure, education and gender statistics, and other relevant economic and social factors.\nThe dependent variable is a measure of a state’s relationship with the base country, the US in this study, and takes two forms. Using CAMEO codes and intensity scores found in coded event data, a continuous dependent variable is derived that represents general affinity between two states. The dependent variable’s other form is a categorical transformation of the continuous affinity variable.\nThe machine learning algorithms applied in this study are a random forest classification model and a random forest regression model in addition to a deep learning model."
   }
 ]
