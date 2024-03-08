@@ -109,6 +109,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./mobility_project.html" rel="" target="">
  <span class="dropdown-text">Exploring Human Mobility Patterns Using Twitter Data</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./nlp_project.html" rel="" target="">
+ <span class="dropdown-text">Natural Language Processing of Tweets to Explore Mental Health</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -247,19 +251,19 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#link-to-final-papergithub-repository" id="toc-link-to-final-papergithub-repository" class="nav-link active" data-scroll-target="#link-to-final-papergithub-repository">Link to Final Paper/Github Repository</a>
   <ul class="collapse">
   <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#project-presentation" id="toc-project-presentation" class="nav-link" data-scroll-target="#project-presentation">Project Presentation</a></li>
   <li><a href="#methods-data" id="toc-methods-data" class="nav-link" data-scroll-target="#methods-data">Methods &amp; Data</a></li>
   <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
-  <li><a href="#project-presentation" id="toc-project-presentation" class="nav-link" data-scroll-target="#project-presentation">Project Presentation</a></li>
   </ul></li>
   <li><a href="#database-building" id="toc-database-building" class="nav-link" data-scroll-target="#database-building">Database Building</a>
   <ul class="collapse">
   <li><a href="#database-purpose" id="toc-database-purpose" class="nav-link" data-scroll-target="#database-purpose">Database Purpose</a></li>
+  <li><a href="#database-project-presentation" id="toc-database-project-presentation" class="nav-link" data-scroll-target="#database-project-presentation">Database Project Presentation</a></li>
+  <li><a href="#shiny-app-for-database-exploration" id="toc-shiny-app-for-database-exploration" class="nav-link" data-scroll-target="#shiny-app-for-database-exploration">Shiny App for Database Exploration</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
   <ul class="collapse">
   <li><a href="#database-relation-schema" id="toc-database-relation-schema" class="nav-link" data-scroll-target="#database-relation-schema">Database Relation Schema</a></li>
   </ul></li>
-  <li><a href="#database-project-presentation" id="toc-database-project-presentation" class="nav-link" data-scroll-target="#database-project-presentation">Database Project Presentation</a></li>
-  <li><a href="#shiny-app-for-database-exploration" id="toc-shiny-app-for-database-exploration" class="nav-link" data-scroll-target="#shiny-app-for-database-exploration">Shiny App for Database Exploration</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
@@ -305,6 +309,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
 <p>Machine learning has been able to accurately predict conflict at the local and state level. This study examines if machine learning can be used to make accurate predictions of generalized relationships between states, with the United States as the base of reference. International relations were measured using an aggregate affinity score derived from event data, and various socioeconomic and demographic factors were used as predictive variables. Multiple models, including a regression and classification random forest and a deep learning model, were built and evaluated in regards to their accuracy in predicting interstate affinity. The strongest predictors of interstate affinity varied significantly depending on the model.</p>
 </section>
+<section id="project-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="project-presentation">Project Presentation</h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQDo64llJrZUpZaPGV0HrFWuqWtoCbIZbdJEB7AZ-QJjCYHrretITpM9z3O9247HQ/embed?start=false&amp;loop=false&amp;delayms=60000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</section>
 <section id="methods-data" class="level2">
 <h2 class="anchored" data-anchor-id="methods-data">Methods &amp; Data</h2>
 <p>This study employs machine learning methods to predict affinity between states using socioeconomic and demographic variables. These variables are dyadic, for example trade flow between a pair of states, and also variables unique to a state, such as GDP, population, military expenditure, education and gender statistics, and other relevant economic and social factors.</p>
@@ -314,10 +322,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="data-sources" class="level2">
 <h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
 <p>This study uses data from various sources, including the World Bank, International Monetary Fund, United Nations, Freedom House, and the Integrated Crisis Early Warning System Coded Event Database (ICEWS).</p>
-</section>
-<section id="project-presentation" class="level2">
-<h2 class="anchored" data-anchor-id="project-presentation">Project Presentation</h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQDo64llJrZUpZaPGV0HrFWuqWtoCbIZbdJEB7AZ-QJjCYHrretITpM9z3O9247HQ/embed?start=false&amp;loop=false&amp;delayms=60000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 <hr>
 </section>
 </section>
@@ -329,14 +333,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="database-purpose" class="level2">
 <h2 class="anchored" data-anchor-id="database-purpose">Database Purpose</h2>
 <p>Studies in international relations often involve numerous variables that cannot be found within a single dataset. Therefore, this project seeks to provide a high quality yet diverse database that will aid relevant studies in their data collection process. Data is collected from multiple credible sources, wrangled, and stored in a PostgreSQL server using R, and then deployed to the cloud in the form of an R Shiny application as proof of concept. The dataset currently includes coded event data, countries and their socioeconomic and demographic data, and dyadic variables such as trade between a pair of states, all for the period from 2015 to 2019.</p>
-</section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>The data was manually collected and imported into R studio and then wrangled into appropriate data types and formats before being exported into a local PostgreSQL server using the ‘DBI’ library. A relation schema was made beforehand and empty tables were created to store the data. Once the data was stored correctly in the local PostgreSQL server, it was converted into SQLite format using DB Browser for SQLite. An application was built using R Shiny that allows basic searching and viewing of the database, and deployed to the cloud as proof-of-concept. Below is the relation schema for the database.</p>
-<section id="database-relation-schema" class="level3">
-<h3 class="anchored" data-anchor-id="database-relation-schema">Database Relation Schema</h3>
-<p><img src="images/final_relation_schema.png" class="img-fluid" alt="Relation Schema"></p>
-</section>
 </section>
 <section id="database-project-presentation" class="level2">
 <h2 class="anchored" data-anchor-id="database-project-presentation">Database Project Presentation</h2>
@@ -358,6 +354,14 @@ Note
 </div>
 </div>
 <iframe src="http://aldenfelix.shinyapps.io/database_project" style="height:1000px;width:1000px;" title="International Relations Database"></iframe>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<p>The data was manually collected and imported into R studio and then wrangled into appropriate data types and formats before being exported into a local PostgreSQL server using the ‘DBI’ library. A relation schema was made beforehand and empty tables were created to store the data. Once the data was stored correctly in the local PostgreSQL server, it was converted into SQLite format using DB Browser for SQLite. An application was built using R Shiny that allows basic searching and viewing of the database, and deployed to the cloud as proof-of-concept. Below is the relation schema for the database.</p>
+<section id="database-relation-schema" class="level3">
+<h3 class="anchored" data-anchor-id="database-relation-schema">Database Relation Schema</h3>
+<p><img src="images/final_relation_schema.png" class="img-fluid" alt="Relation Schema"></p>
+</section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
